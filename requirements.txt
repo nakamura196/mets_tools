@@ -2,3 +2,4 @@ nbdev
 lxml
 pandas
 matplotlib
+japanize-matplotlib

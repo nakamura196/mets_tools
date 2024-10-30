@@ -16,6 +16,7 @@ from lxml import etree, objectify
 import pandas as pd
 import matplotlib.pyplot as plt
 import re
+import japanize_matplotlib
 
 # %% ../nbs/00_core.ipynb 4
 def convert_size(size):
@@ -249,7 +250,7 @@ class METSFile(object):
         # プロットの準備
         df.plot(kind='bar', stacked=True, figsize=(10, 6))
         plt.title('Event Type Count per File')
-        plt.xlabel('Event Type')
+        plt.xlabel('Event Type ああああ')
         plt.ylabel('Count')
         plt.xticks(rotation=45)
         plt.tight_layout()

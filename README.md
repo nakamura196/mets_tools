@@ -34,6 +34,8 @@ Documentation can be found hosted on this GitHub
 ## How to use
 
 ``` python
+from mets_tools.core import METSFile
+
 local_file = "./test.xml"
 ins = METSFile(local_file)
 ins.parse_mets()
