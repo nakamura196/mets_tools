@@ -1,0 +1,42 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "mets_tools",
+    "section": "",
+    "text": "Human-Friendly Exploration Tool for Archivematica METS Files\nThis tool is based on METSFlask by Tim Walsh.\nMETSFlask provides a foundation for interacting with and visualizing METS (Metadata Encoding and Transmission Standard) files. Building on this work, this tool offers additional features designed specifically for exploring and understanding Archivematica METS files, with a focus on accessibility and user-friendly navigation.",
+    "crumbs": [
+      "mets_tools"
+    ]
+  },
+  {
+    "objectID": "index.html#usage",
+    "href": "index.html#usage",
+    "title": "mets_tools",
+    "section": "Usage",
+    "text": "Usage\n\nInstallation\nInstall latest from the GitHub repository:\n$ pip install git+https://github.com/nakamura196/mets_tools.git\n\n\nDocumentation\nDocumentation can be found hosted on this GitHub repository’s pages.",
+    "crumbs": [
+      "mets_tools"
+    ]
+  },
+  {
+    "objectID": "index.html#how-to-use",
+    "href": "index.html#how-to-use",
+    "title": "mets_tools",
+    "section": "How to use",
+    "text": "How to use\n\nfrom mets_tools.core import METSFile\n\nlocal_file = \"./test.xml\"\nins = METSFile(local_file)\nins.parse_mets()\n\n\nOriginal Files\n\noriginal_files = ins.get_original_files()\noriginal_files\n\n\n\n\n\n\n\n\namdsec_id\nfilepath\nuuid\nhashtype\nhashvalue\nbytes\nformat\nversion\npuid\nmodified_date\nfits_modified_unixtime\nfilename\nsize\n\n\n\n\n0\namdSec_2\nS001.png\n386c4295-64fb-45b9-b5c6-3adfcd7f2bcf\nsha256\n5288586020b7ff120ad53f94432f719aa0ca1c5e094dc9...\n9097282\nPortable Network Graphics\n1.2\n&lt;a href=\"http://nationalarchives.gov.uk/PRONOM...\n2024-10-25T03:00:20Z\n\nS001.png\n9 MB\n\n\n\n\n\n\n\n\n\nFile Format Counts\n\nins.visualize_file_format_counts()\n\n\n\n\n\n\n\n\n\n\nFile Events Count\n\nins.visualize_file_events_count()\n\n\n\n\n\n\n\n\n\n\nFile Section\n\ndf = ins.parse_file_sec()\ndf\n\n\n\n\n\n\n\n\nUSE\nFile ID\nGroup ID\nADMID\nFile Location\nLOCTYPE\nOTHERLOCTYPE\n\n\n\n\n0\noriginal\nfile-386c4295-64fb-45b9-b5c6-3adfcd7f2bcf\nGroup-386c4295-64fb-45b9-b5c6-3adfcd7f2bcf\namdSec_2\nobjects/S001.png\nOTHER\nSYSTEM\n\n\n1\nsubmissionDocumentation\nfile-f6acdbb3-095f-4771-8fd9-8c5b74e296ec\nGroup-f6acdbb3-095f-4771-8fd9-8c5b74e296ec\namdSec_5\nobjects/submissionDocumentation/transfer-png-c...\nOTHER\nSYSTEM\n\n\n2\npreservation\nfile-6f93b80d-fb6d-41b6-819e-b9bc3ad085e6\nGroup-386c4295-64fb-45b9-b5c6-3adfcd7f2bcf\namdSec_1\nobjects/S001-6f93b80d-fb6d-41b6-819e-b9bc3ad08...\nOTHER\nSYSTEM\n\n\n3\ntext/ocr\nfile-bd353cfc-64aa-4f48-af61-4a4d8ee3a55b\nGroup-386c4295-64fb-45b9-b5c6-3adfcd7f2bcf\namdSec_3\nobjects/metadata/OCRfiles/S001-386c4295-64fb-4...\nOTHER\nSYSTEM\n\n\n4\nmetadata\nfile-d8aa2e08-71bd-4852-9d87-e6eba354affb\nGroup-d8aa2e08-71bd-4852-9d87-e6eba354affb\namdSec_4\nobjects/metadata/transfers/png-c4688ddd-8bb7-4...\nOTHER\nSYSTEM\n\n\n\n\n\n\n\n\n\nStructure Map\n\nins.visualize_structMap()\n\nStructMap (TYPE: physical, LABEL: Archivematica default)\n└── Directory: png-e5e48d8a-421a-461d-8e55-468bf37253a8\n    └── Directory: objects\n        ├── Item: S001.png\n        ├── Item: S001-6f93b80d-fb6d-41b6-819e-b9bc3ad085e6.tif\n        ├── Directory: submissionDocumentation\n        │   └── Directory: transfer-png-c4688ddd-8bb7-4593-b4bf-f4302ea6882c\n        │       └── Item: METS.xml\n        └── Directory: metadata\n            ├── Directory: OCRfiles\n            │   └── Item: S001-386c4295-64fb-45b9-b5c6-3adfcd7f2bcf.txt\n            └── Directory: transfers\n                └── Directory: png-c4688ddd-8bb7-4593-b4bf-f4302ea6882c\n                    └── Item: directory_tree.txt\nStructMap (TYPE: logical, LABEL: Normative Directory Structure)\n└── Directory: png-e5e48d8a-421a-461d-8e55-468bf37253a8\n    └── Directory: objects\n        ├── Item: S001.png\n        ├── Item: S001-6f93b80d-fb6d-41b6-819e-b9bc3ad085e6.tif\n        ├── Directory: submissionDocumentation\n        │   └── Directory: transfer-png-c4688ddd-8bb7-4593-b4bf-f4302ea6882c\n        │       └── Item: METS.xml\n        └── Directory: metadata\n            ├── Directory: OCRfiles\n            │   └── Item: S001-386c4295-64fb-45b9-b5c6-3adfcd7f2bcf.txt\n            └── Directory: transfers\n                └── Directory: png-c4688ddd-8bb7-4593-b4bf-f4302ea6882c\n                    └── Item: directory_tree.txt\n\n\n\n\nFile Changes\n\nins.show_file_changes()\n\nファイル名の変更は見つかりませんでした。",
+    "crumbs": [
+      "mets_tools"
+    ]
+  },
+  {
+    "objectID": "core.html",
+    "href": "core.html",
+    "title": "core",
+    "section": "",
+    "text": "source\n\nMETSFile\n\n METSFile (path)\n\nClass for METS file parsing methods\n\nsource\n\n\nconvert_size\n\n convert_size (size)",
+    "crumbs": [
+      "core"
+    ]
+  }
+]
